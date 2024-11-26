@@ -30,12 +30,12 @@ spec:
     spec: |
       predictor:
         imagePullSecrets:
-          - name: dhruvjyotidocker    # your docker registry secret
+          - name: kirylkuzmichdocker    # your docker registry secret
         minReplicas: 1
         maxReplicas: 5    # how much to scale
         containers:
         - name: kfserving-container
-          image: "docker.io/dhruvjyoti/serve-house:01"
+          image: "docker.io/kirylkuzmich/house-price:01"
           ports:
             - containerPort: 9001    # customizable port
               protocol: TCP
